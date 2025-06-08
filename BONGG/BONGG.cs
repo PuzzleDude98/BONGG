@@ -11,7 +11,6 @@ namespace BONGG
         private AudioClip bellClip;
         private PlayerCharacterController playerController;
         private ShipThrusterController thrusterController;
-        private bool isModEnabled = true;
 
         private void Start()
         {
@@ -145,11 +144,6 @@ namespace BONGG
                 return;
             }
 
-            if (!isModEnabled)
-            {
-                return;
-            }
-
             // Add some randomization to prevent repetitive sounds
             bellAudioSource.pitch = Random.Range(0.95f, 1.00f);
             bellAudioSource.PlayOneShot(bellClip);
@@ -158,7 +152,6 @@ namespace BONGG
         // Configuration methods
         public override void Configure(IModConfig config)
         {
-            isModEnabled = config.GetSettingsValue<bool>("enabled");
 
             var volume = config.GetSettingsValue<float>("volume");
             if (bellAudioSource != null)
