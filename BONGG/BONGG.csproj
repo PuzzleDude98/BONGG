@@ -15,14 +15,17 @@
     <PackageReference Include="OuterWildsGameLibs" Version="1.1.15.1018" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="default-config.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="manifest.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+	<None Include="default-config.json">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>
+	<None Include="manifest.json">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>
+	<None Update="assets\**\*">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>
   </ItemGroup>
-  <ItemGroup>
+   <ItemGroup>
     <Content Include="BONGG.csproj.user" />
   </ItemGroup>
 </Project>
