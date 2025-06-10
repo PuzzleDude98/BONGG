@@ -21,7 +21,7 @@
 	<None Include="manifest.json">
 		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	</None>
-	<None Update="assets\**\*">
+	<None Update="Assets\**\*">
 		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	</None>
   </ItemGroup>
