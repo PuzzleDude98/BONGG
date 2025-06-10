@@ -39,7 +39,7 @@ namespace BONGG
 
                     if (parentMod != null)
                     {
-                        parentMod.PlayBellSound();
+                        parentMod.PlayBellSound(this.GetComponentInParent<AudioSource>());
                         lastCollisionTime = Time.time;
                     }
                     else
